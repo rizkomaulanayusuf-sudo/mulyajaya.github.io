@@ -1248,6 +1248,78 @@
             transform: translateY(0);
         }
         
+        /* Force white background when using dark mode search engines */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #FFFFFF !important;
+                color: #333333 !important;
+            }
+            
+            /* Ensure all sections have white background */
+            .section, 
+            .about, 
+            .services, 
+            .process, 
+            .portfolio, 
+            .faq, 
+            .contact,
+            .navbar {
+                background-color: #FFFFFF !important;
+            }
+            
+            /* Adjust text colors for dark mode */
+            .text-dark {
+                color: #333333 !important;
+            }
+            
+            /* Ensure cards and other elements have appropriate backgrounds */
+            .about-card,
+            .service-card,
+            .portfolio-card,
+            .contact-info,
+            .contact-form,
+            .accordion-item,
+            .profile-table {
+                background-color: #FFFFFF !important;
+                color: #333333 !important;
+            }
+            
+            /* Footer adjustments */
+            .footer {
+                background-color: #333333 !important;
+                color: #FFFFFF !important;
+            }
+            
+            .footer-widget h4,
+            .footer-widget p,
+            .footer-links a,
+            .footer-bottom {
+                color: #FFFFFF !important;
+            }
+            
+            /* Ensure form inputs have light background */
+            .form-control,
+            .form-select {
+                background-color: #FFFFFF !important;
+                color: #333333 !important;
+                border-color: #DDDDDD !important;
+            }
+            
+            /* Ensure dropdown menu has light background */
+            .dropdown-menu {
+                background-color: #FFFFFF !important;
+            }
+            
+            .dropdown-item {
+                color: #333333 !important;
+            }
+            
+            .dropdown-item:hover {
+                background-color: #F5F5F5 !important;
+                color: #333333 !important;
+            }
+        }
+        
         /* Mobile Responsive Improvements */
         @media (max-width: 992px) {
             .hero-content h1 {
