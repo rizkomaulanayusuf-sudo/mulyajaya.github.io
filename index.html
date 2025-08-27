@@ -136,60 +136,6 @@
             background-color: var(--secondary);
         }
         
-        /* Contact Buttons in Hero */
-        .hero-contact {
-            position: absolute;
-            bottom: 100px;
-            right: 5%;
-            z-index: 3;
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-        
-        .hero-contact-btn {
-            background-color: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            color: var(--white);
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .hero-contact-btn:hover {
-            background-color: var(--white);
-            color: var(--primary-dark);
-            transform: translateY(-3px);
-        }
-        
-        .hero-contact-btn.whatsapp {
-            background-color: var(--primary-dark); /* Diubah dari hijau ke coklat */
-            border-color: var(--primary-dark); /* Diubah dari hijau ke coklat */
-            font-size: 1.1rem; /* Memperbesar ukuran font */
-            font-weight: 600; /* Menebalkan font */
-            padding: 12px 25px; /* Memperbesar padding */
-        }
-        
-        .hero-contact-btn.whatsapp:hover {
-            background-color: var(--secondary); /* Diubah dari hijau ke coklat lebih terang */
-            border-color: var(--secondary); /* Diubah dari hijau ke coklat lebih terang */
-        }
-        
-        .hero-contact-btn i {
-            margin-right: 8px;
-            font-size: 1.2rem; /* Memperbesar ikon WhatsApp */
-        }
-        
-        .hero-contact-btn.whatsapp i {
-            font-size: 1.4rem; /* Memperbesar ikon WhatsApp lebih besar */
-        }
-        
         /* Navbar Styles */
         .navbar {
             background-color: rgba(255, 255, 255, 0.95);
@@ -1203,15 +1149,6 @@
             .social-float-item.instagram:hover {
                 background-color: var(--secondary); /* Warna coklat lebih terang saat hover */
             }
-            
-            .hero-contact-btn.whatsapp {
-                font-size: 1rem;
-                padding: 10px 20px;
-            }
-            
-            .hero-contact-btn.whatsapp i {
-                font-size: 1.2rem;
-            }
         }
         
         @media (max-width: 768px) {
@@ -1280,25 +1217,6 @@
                 font-size: 0.9rem;
                 margin-right: 10px;
                 margin-bottom: 10px;
-            }
-            
-            .hero-contact {
-                bottom: 120px;
-                right: 3%;
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .hero-contact-btn {
-                font-size: 0.85rem;
-                padding: 8px 15px;
-                width: 160px;
-                justify-content: center;
-            }
-            
-            .hero-contact-btn.whatsapp {
-                font-size: 0.9rem;
-                padding: 8px 15px;
             }
             
             .hero-indicators {
@@ -1519,19 +1437,6 @@
                 font-size: 0.9rem;
             }
             
-            .hero-contact {
-                bottom: 100px;
-            }
-            
-            .hero-contact-btn.whatsapp {
-                font-size: 0.85rem;
-                padding: 8px 12px;
-            }
-            
-            .hero-contact-btn.whatsapp i {
-                font-size: 1rem;
-            }
-            
             /* Section Small Mobile */
             .section {
                 padding: 50px 0;
@@ -1653,16 +1558,6 @@
                     <a href="#portfolio" class="btn-outline-hero">Portofolio</a>
                 </div>
             </div>
-        </div>
-        
-        <!-- Contact Buttons in Hero -->
-        <div class="hero-contact">
-            <a href="tel:+6285975053855" class="hero-contact-btn">
-                <i class="fas fa-phone"></i> Call Now
-            </a>
-            <a href="https://wa.me/6285975053855?text=Halo%20Mulya%20Jaya%20Interior,%20saya%20ingin%20konsultasi%20tentang%20desain%20interior" target="_blank" class="hero-contact-btn whatsapp">
-                <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
         </div>
         
         <div class="hero-indicators">
