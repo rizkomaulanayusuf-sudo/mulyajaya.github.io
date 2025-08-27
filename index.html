@@ -131,24 +131,6 @@
             transform: scale(1.1);
         }
         
-        .social-float-item.facebook {
-            background-color: var(--primary-dark); /* Warna coklat */
-        }
-        
-        .social-float-item.facebook:hover {
-            background-color: var(--secondary); /* Warna coklat lebih terang saat hover */
-            transform: scale(1.1);
-        }
-        
-        .social-float-item.tiktok {
-            background-color: var(--primary-dark); /* Warna coklat */
-        }
-        
-        .social-float-item.tiktok:hover {
-            background-color: var(--secondary); /* Warna coklat lebih terang saat hover */
-            transform: scale(1.1);
-        }
-        
         .social-float-item:hover {
             transform: scale(1.1);
             background-color: var(--secondary);
@@ -1169,7 +1151,7 @@
             transform: translateY(0);
         }
         
-        /* Responsive */
+        /* Mobile Responsive Improvements */
         @media (max-width: 992px) {
             .hero-content h1 {
                 font-size: 3rem;
@@ -1222,24 +1204,6 @@
                 background-color: var(--secondary); /* Warna coklat lebih terang saat hover */
             }
             
-            /* Menyesuaikan ukuran tombol Facebook di mode tablet */
-            .social-float-item.facebook {
-                background-color: var(--primary-dark); /* Warna coklat */
-            }
-            
-            .social-float-item.facebook:hover {
-                background-color: var(--secondary); /* Warna coklat lebih terang saat hover */
-            }
-            
-            /* Menyesuaikan ukuran tombol TikTok di mode tablet */
-            .social-float-item.tiktok {
-                background-color: var(--primary-dark); /* Warna coklat */
-            }
-            
-            .social-float-item.tiktok:hover {
-                background-color: var(--secondary); /* Warna coklat lebih terang saat hover */
-            }
-            
             .hero-contact-btn.whatsapp {
                 font-size: 1rem;
                 padding: 10px 20px;
@@ -1251,28 +1215,85 @@
         }
         
         @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.5rem;
+            /* Improved Mobile Navigation */
+            .navbar {
+                padding: 10px 0;
+            }
+            
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+            
+            .navbar-nav {
+                background-color: rgba(255, 255, 255, 0.95);
+                padding: 15px;
+                border-radius: 8px;
+                margin-top: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .navbar-nav .nav-link {
+                padding: 10px 0;
+                border-bottom: 1px solid var(--border);
+                margin: 0;
+            }
+            
+            .navbar-nav .nav-link:last-child {
+                border-bottom: none;
+            }
+            
+            .navbar-nav .nav-link::after {
+                display: none;
+            }
+            
+            /* Hero Section Mobile Improvements */
+            .hero {
+                min-height: 600px;
             }
             
             .hero-content {
                 padding-left: 3%;
+                max-width: 90%;
             }
             
-            .hero-indicators {
-                left: 3%;
+            .hero-content h1 {
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }
+            
+            .hero-content .subtitle {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+            
+            .hero-badges {
+                margin-bottom: 20px;
+            }
+            
+            .hero-badge {
+                font-size: 0.75rem;
+                padding: 4px 10px;
+            }
+            
+            .btn-hero, .btn-outline-hero {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+                margin-right: 10px;
+                margin-bottom: 10px;
             }
             
             .hero-contact {
+                bottom: 120px;
                 right: 3%;
-                bottom: 180px;
                 flex-direction: column;
                 gap: 10px;
             }
             
             .hero-contact-btn {
-                font-size: 0.8rem;
+                font-size: 0.85rem;
                 padding: 8px 15px;
+                width: 160px;
+                justify-content: center;
             }
             
             .hero-contact-btn.whatsapp {
@@ -1280,57 +1301,226 @@
                 padding: 8px 15px;
             }
             
+            .hero-indicators {
+                left: 3%;
+                bottom: 20px;
+            }
+            
+            /* Section Improvements */
             .section {
-                padding: 70px 0;
+                padding: 60px 0;
             }
             
             .section-title {
                 font-size: 2rem;
+                margin-bottom: 10px;
             }
             
+            .section-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section-header {
+                margin-bottom: 40px;
+            }
+            
+            /* About Section Mobile */
+            .about-card {
+                padding: 25px;
+                margin-bottom: 20px;
+            }
+            
+            .profile-table {
+                padding: 15px;
+            }
+            
+            .profile-table tr td {
+                font-size: 0.9rem;
+                padding: 6px 0;
+            }
+            
+            /* Services Section Mobile */
             .services-grid,
             .portfolio-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                grid-template-columns: 1fr;
                 gap: 20px;
             }
             
+            .service-card,
+            .portfolio-card {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+            
+            .service-image,
+            .portfolio-image {
+                height: 200px;
+            }
+            
+            /* Process Section Mobile */
+            .process-step {
+                margin-bottom: 30px;
+                padding: 0 10px;
+            }
+            
+            .step-number {
+                width: 80px;
+                height: 80px;
+                font-size: 1.8rem;
+            }
+            
+            .step-title {
+                font-size: 1.1rem;
+            }
+            
+            .step-desc {
+                font-size: 0.9rem;
+            }
+            
+            /* Portfolio Section Mobile */
+            .portfolio-filters {
+                margin-bottom: 25px;
+            }
+            
+            .filter-btn {
+                font-size: 0.85rem;
+                padding: 6px 15px;
+            }
+            
+            /* FAQ Section Mobile */
+            .accordion-button {
+                font-size: 1rem;
+                padding: 15px 20px;
+            }
+            
+            .accordion-body {
+                padding: 20px;
+                font-size: 0.95rem;
+            }
+            
+            /* CTA Section Mobile */
+            .cta {
+                padding: 60px 0;
+            }
+            
+            .cta h2 {
+                font-size: 2rem;
+            }
+            
+            .cta p {
+                font-size: 1rem;
+            }
+            
+            .btn-cta {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+            
+            /* Contact Section Mobile */
+            .contact-info,
+            .contact-form {
+                padding: 25px;
+                margin-bottom: 20px;
+            }
+            
+            .contact-info h3,
+            .contact-form h3 {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+            
+            .contact-item {
+                margin-bottom: 15px;
+            }
+            
+            .map-container {
+                height: 300px;
+                margin-top: 20px;
+            }
+            
+            /* Footer Mobile */
+            .footer {
+                padding: 50px 0 15px;
+            }
+            
+            .footer-widget h4 {
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+            }
+            
+            .footer-about p {
+                font-size: 0.95rem;
+            }
+            
+            .footer-links li {
+                margin-bottom: 10px;
+            }
+            
+            .footer-links a {
+                font-size: 0.95rem;
+            }
+            
+            .newsletter-form input {
+                padding: 10px 15px;
+            }
+            
+            .newsletter-form button {
+                padding: 6px 12px;
+            }
+            
+            /* Hide social media float on mobile */
             .social-media-float {
                 display: none;
+            }
+            
+            /* Add floating WhatsApp button for mobile */
+            .mobile-whatsapp {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+                background-color: var(--primary-dark);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--white);
+                font-size: 1.8rem;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+                animation: pulse 2s infinite;
+            }
+            
+            @keyframes pulse {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(139, 69, 19, 0.7);
+                }
+                70% {
+                    box-shadow: 0 0 0 15px rgba(139, 69, 19, 0);
+                }
+                100% {
+                    box-shadow: 0 0 0 0 rgba(139, 69, 19, 0);
+                }
             }
         }
         
         @media (max-width: 576px) {
+            /* Hero Section Small Mobile */
+            .hero {
+                min-height: 550px;
+            }
+            
             .hero-content h1 {
-                font-size: 2rem;
-            }
-            
-            .hero-content .subtitle {
-                font-size: 1rem;
-            }
-            
-            .btn-hero,
-            .btn-outline-hero {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-                margin-bottom: 10px;
-            }
-            
-            .section {
-                padding: 50px 0;
-            }
-            
-            .section-title {
                 font-size: 1.8rem;
             }
             
-            .about-card,
-            .contact-info,
-            .contact-form {
-                padding: 25px;
+            .hero-content .subtitle {
+                font-size: 0.9rem;
             }
             
             .hero-contact {
-                bottom: 160px;
+                bottom: 100px;
             }
             
             .hero-contact-btn.whatsapp {
@@ -1341,25 +1531,67 @@
             .hero-contact-btn.whatsapp i {
                 font-size: 1rem;
             }
+            
+            /* Section Small Mobile */
+            .section {
+                padding: 50px 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-subtitle {
+                font-size: 0.95rem;
+            }
+            
+            /* About Section Small Mobile */
+            .about-card,
+            .contact-info,
+            .contact-form {
+                padding: 20px;
+            }
+            
+            /* Process Section Small Mobile */
+            .step-number {
+                width: 70px;
+                height: 70px;
+                font-size: 1.6rem;
+            }
+            
+            /* CTA Section Small Mobile */
+            .cta h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta p {
+                font-size: 0.95rem;
+            }
+            
+            /* Mobile WhatsApp Button Small Mobile */
+            .mobile-whatsapp {
+                width: 55px;
+                height: 55px;
+                font-size: 1.6rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Social Media Floating -->
+    <!-- Social Media Floating (Hidden on Mobile) -->
     <div class="social-media-float">
-        <a href="https://wa.me/6281234567890?text=Halo%20Mulya%20Jaya%20Interior,%20saya%20ingin%20konsultasi%20tentang%20desain%20interior" target="_blank" class="social-float-item whatsapp">
+        <a href="https://wa.me/6285975053855?text=Halo%20Mulya%20Jaya%20Interior,%20saya%20ingin%20konsultasi%20tentang%20desain%20interior" target="_blank" class="social-float-item whatsapp">
             <i class="fab fa-whatsapp"></i>
         </a>
         <a href="https://www.instagram.com/interior.mulyajaya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-float-item instagram">
             <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://www.facebook.com/mulyajayainterior" target="_blank" class="social-float-item facebook">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://www.tiktok.com/@mulyajayainterior" target="_blank" class="social-float-item tiktok">
-            <i class="fab fa-tiktok"></i>
-        </a>
     </div>
+    
+    <!-- Mobile WhatsApp Button (Visible on Mobile) -->
+    <a href="https://wa.me/6285975053855?text=Halo%20Mulya%20Jaya%20Interior,%20saya%20ingin%20konsultasi%20tentang%20desain%20interior" target="_blank" class="mobile-whatsapp d-md-none">
+        <i class="fab fa-whatsapp"></i>
+    </a>
     
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -1425,10 +1657,10 @@
         
         <!-- Contact Buttons in Hero -->
         <div class="hero-contact">
-            <a href="tel:+6281234567890" class="hero-contact-btn">
+            <a href="tel:+6285975053855" class="hero-contact-btn">
                 <i class="fas fa-phone"></i> Call Now
             </a>
-            <a href="https://wa.me/6281234567890?text=Halo%20Mulya%20Jaya%20Interior,%20saya%20ingin%20konsultasi%20tentang%20desain%20interior" target="_blank" class="hero-contact-btn whatsapp">
+            <a href="https://wa.me/6285975053855?text=Halo%20Mulya%20Jaya%20Interior,%20saya%20ingin%20konsultasi%20tentang%20desain%20interior" target="_blank" class="hero-contact-btn whatsapp">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
         </div>
@@ -1846,14 +2078,14 @@
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
                             <div>
-                                <p>+62 812-3456-7890</p>
+                                <p>+62 859-7505-3855</p>
                             </div>
                         </div>
                         
                         <div class="contact-item">
                             <i class="fab fa-whatsapp"></i>
                             <div>
-                                <p>+62 812-3456-7890</p>
+                                <p>+62 859-7505-3855</p>
                             </div>
                         </div>
                         
@@ -1875,13 +2107,7 @@
                             <a href="https://www.instagram.com/interior.mulyajaya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-link">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://www.facebook.com/mulyajayainterior" target="_blank" class="social-link">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.tiktok.com/@mulyajayainterior" target="_blank" class="social-link">
-                                <i class="fab fa-tiktok"></i>
-                            </a>
-                            <a href="https://wa.me/6281234567890?text=Halo%20Mulya%20Jaya%20Interior,%20saya%20ingin%20konsultasi%20tentang%20desain%20interior" target="_blank" class="social-link">
+                            <a href="https://wa.me/6285975053855?text=Halo%20Mulya%20Jaya%20Interior,%20saya%20ingin%20konsultasi%20tentang%20desain%20interior" target="_blank" class="social-link">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                         </div>
@@ -1949,13 +2175,7 @@
                             <a href="https://www.instagram.com/interior.mulyajaya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-link">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://www.facebook.com/mulyajayainterior" target="_blank" class="social-link">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.tiktok.com/@mulyajayainterior" target="_blank" class="social-link">
-                                <i class="fab fa-tiktok"></i>
-                            </a>
-                            <a href="https://wa.me/6281234567890?text=Halo%20Mulya%20Jaya%20Interior,%20saya%20ingin%20konsultasi%20tentang%20desain%20interior" target="_blank" class="social-link">
+                            <a href="https://wa.me/6285975053855?text=Halo%20Mulya%20Jaya%20Interior,%20saya%20ingin%20konsultasi%20tentang%20desain%20interior" target="_blank" class="social-link">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                         </div>
@@ -2099,6 +2319,16 @@
                         top: target.offsetTop - 80,
                         behavior: 'smooth'
                     });
+                }
+            });
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
                 }
             });
         });
